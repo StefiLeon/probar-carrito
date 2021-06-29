@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Etiquetas meta-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Archivo histórico de partidos de la Selección Femenino Argentina de Fútbol">
+<meta name="keywords" content="FUTBOL, DEPORTE, FEMENINO, MUJER, ARGENTINA, SELECCION">
+<title>Presupuesto multimedia</title>
+<link rel="icon" href="https://cdn3.ct-assets.com/assets/landings/womens-world-cup-2019/logo-f11500c9bd7395ac801e2255091433ae4942be72222ba9fba525c8dfbec2f3ba.png">
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!--CSS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/5f1119f675.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./css/css.css">
+</head>
+
+<body>
+    <!--Empieza nav-->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #31B5F7">
+        <!--Logo-->
+        <a class="navbar-brand" href="./index.html">
+            <img src="https://cdn3.ct-assets.com/assets/landings/womens-world-cup-2019/logo-f11500c9bd7395ac801e2255091433ae4942be72222ba9fba525c8dfbec2f3ba.png" width="50" height="auto" alt="logo femenino">
+        </a>
+        <!--Toggler-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Botones-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#" id="carritoDeCompras" class="nav-link">Ver carrito  <i class="fas fa-lg fa-comments-dollar"></a></i>
+                    <div class="container" id="lista-carrito" style="display: none"> 
+                        <p id="totalCompra"></p>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="./index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="./fotos.html" class="nav-link">Fotos</a></li>
+                <li class="nav-item"><a href="./archivo.html" class="nav-link">Archivo</a></li>
+                <li class="nav-item"><a href="./historia.html" class="nav-link">Historia</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Torneo Apertura
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./plantelesApertura.html">Planteles</a>
+                        <a class="dropdown-item" href="./goleadorasApertura.html">Goleadoras</a>
+                        <a class="dropdown-item" href="./resultadosApertura.html">Resultados</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="../views/contacto.html" class="nav-link">¿Quiénes somos?</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--------------->
+
+    <!--Empieza Hero element-->
+    <div class="hero-image" id="hero--presupuesto">
+        <div class="hero-text">
+            <!-- <h1>Tienda FutFem</h1> -->
+            <p>Tus futbolistas preferidas tienen sus productos. ¡Elegí el tuyo!</p>
+        </div>
+    </div>
+
+    <!--Empieza sección presupuesto-->
+    <section class="mb-md-4 mt-md-4 pb-md-4 pt-md-4">
+        <div class="container">
+            <div class="row d-flex" id="productosEnJS">
+                <!--Acá se agrega dinámicamente el carrito-->
+            </div>
+            <div class="row d-flex" id="carritoEnJS"></div>
+        </div>
+    </section>
+
+    <!--Empieza Footer-->
+    <footer>
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-md-12 text-center">
+                    <div class="footer-widget mb-4">
+                        <h2 class="mb-3">¡Seguinos!</h2>
+                        <ul class="footer-social-media">
+                            <li><a href="https://twitter.com/StefiLeon"><span><i class="fab fa-twitter"></i></span></i></span></a></li>
+                            <li><a href="https://facebook.com/lasfotosdelasjugadoras"><span><i class="fab fa-facebook-f"></i></span></a></li>
+                            <li><a href="https://instagram.com/lasfotosdelasjugadoras"><span><i class="fab fa-instagram"></i></span></a></li>
+                        </ul>
+                        <p>¡Nos vemos en Australia/Nueva Zelanda 2023!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Termina Footer-->
+    
+    <!--Scripts BS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-------------->
+
+    <!--Script JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="./productos.json"></script>
+    <script src="./js.js"></script>
+    <!------------->
+    
+    </body>
+    </html>
