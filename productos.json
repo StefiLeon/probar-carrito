@@ -4,84 +4,84 @@
         "tipoDeProducto": "Taza",
         "modelo": "Banini",
         "precio": 800,
-        "imagen": "../img/Taza_Banini.jpg"
+        "imagen": "./img/Taza_Banini.jpg"
         },
         {
         "id": 2, 
         "tipoDeProducto": "Taza", 
         "modelo": "Bonsegundo", 
         "precio": 800, 
-        "imagen": "../img/Taza_Bonsegundo.jpg"
+        "imagen": "./img/Taza_Bonsegundo.jpg"
         },
         {
         "id": 3, 
         "tipoDeProducto": "Taza", 
         "modelo": "Cometti", 
         "precio": 800, 
-        "imagen":"../img/Taza_Cometti.jpg"
+        "imagen":"./img/Taza_Cometti.jpg"
         },
         {
         "id": 4, 
         "tipoDeProducto": "Taza", 
         "modelo": "Barroso", 
         "precio": 800, 
-        "imagen":"../img/Taza_Barroso.jpg"
+        "imagen":"./img/Taza_Barroso.jpg"
         },
         {
         "id": 5, 
         "tipoDeProducto": "Taza", 
         "modelo": "Correa", 
         "precio": 800, 
-        "imagen":"../img/Taza_Correa.jpg"
+        "imagen":"./img/Taza_Correa.jpg"
         },
         {
         "id": 6, 
         "tipoDeProducto": "Cuadro", 
         "modelo": "Argentina-Inglaterra", 
         "precio": 1500, 
-        "imagen":"../img/Cuadro_Vanina.jpg"
+        "imagen":"./img/Cuadro_Vanina.jpg"
         },
         {
         "id": 7, 
         "tipoDeProducto": "Taza", 
         "modelo": "Gomez-Ares", 
         "precio": 800, 
-        "imagen":"../img/Taza_Gomez_Ares.jpg"
+        "imagen":"./img/Taza_Gomez_Ares.jpg"
         },
         {
         "id": 8, 
         "tipoDeProducto": "Taza", 
         "modelo": "Ippolito", 
         "precio": 800, 
-        "imagen":"../img/Taza_Ippolito.jpg"
+        "imagen":"./img/Taza_Ippolito.jpg"
         },
         {
         "id": 9, 
         "tipoDeProducto": "Taza", 
         "modelo": "Morcillo", 
         "precio": 800, 
-        "imagen":"../img/Taza_Justina.jpg"
+        "imagen":"./img/Taza_Justina.jpg"
         },
         {
         "id": 10, 
         "tipoDeProducto": "Taza", 
         "modelo": "Menendez", 
         "precio": 800, 
-        "imagen":"../img/Taza_Menendez.jpg"
+        "imagen":"./img/Taza_Menendez.jpg"
         },
         {
         "id": 11, 
         "tipoDeProducto": "Cuadro", 
         "modelo": "Bravo", 
         "precio": 1500, 
-        "imagen":"../img/Cuadro_Chule.jpg"
+        "imagen":"./img/Cuadro_Chule.jpg"
         },
         {
         "id": 12, 
         "tipoDeProducto": "Cuadro", 
         "modelo": "Panamericanos", 
         "precio": 1500, 
-        "imagen":"../img/Cuadro_Panamericanos.jpg"
+        "imagen":"./img/Cuadro_Panamericanos.jpg"
         }
     ]
 }
