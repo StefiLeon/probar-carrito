@@ -33,13 +33,17 @@ $.getJSON(URLJSON, function(respuesta, estado){
                 for (item of carrito) {
                     if(item.id == producto.id) {
                         console.log("Hay coincidencia.")
+                        //Sumar item
                         item.cantidad = item.cantidad+1;
                         console.log(carrito);
                         idDeCompra = true;
+                        //Sumar precio
                         total += producto.precio;
                         console.log(total);
-                        $("#lista-carrito").prepend(`<p class="compras">${producto.tipoDeProducto} ${producto.modelo}: $ ${producto.precio}</p>`);
+                        //Actualizar total
                         presupuestoTotal.innerHTML = "El precio total es de $ " + total;
+                        document.getElementById(`cantidadProd${producto.id}`).innerHTML = producto.cantidad;
+                        //cantidadProd.innerHTML = producto.cantidad;
                         const enJSON = JSON.stringify(producto);
                         localStorage.setItem(`${producto.tipoDeProducto} ${producto.modelo}`, enJSON);
                         return total;
@@ -50,23 +54,28 @@ $.getJSON(URLJSON, function(respuesta, estado){
                     agregarProducto(productoParaAgregar);
                     total += producto.precio;
                     console.log(total);
-                    $("#lista-carrito").prepend(`<p class="compras">${producto.tipoDeProducto} ${producto.modelo}: $ ${producto.precio}</p>`);
                     presupuestoTotal.innerHTML = "El precio total es de $ " + total;
                     const enJSON = JSON.stringify(producto);
                     localStorage.setItem(`${producto.tipoDeProducto} ${producto.modelo}`, enJSON);
+                    //agregar al modal carrito
+                    $('#probarAca').append(`<tr>
+                    <td class="w-25 compras">
+                    <img src="${producto.imagen}" class="img-fluid img-thumbnail" alt="${producto.tipoDeProducto} ${producto.modelo}">
+                    </td>
+                    <td class="compras">${producto.tipoDeProducto} ${producto.modelo}</td>
+                    <td class="compras">$ ${producto.precio}</td>
+                    <td class="compras" id="cantidadProd${producto.id}">${producto.cantidad}</td>
+                    <td class="compras">
+                    </td>
+                    </tr>`)
                     return total;
                 }
             });
         }
-        const presupuestoTotal = document.createElement('p');
-        presupuestoTotal.id = "presupuestoTotal";
         if(contador>0){
             document.getElementById("presupuestoTotal").innerHTML = "El precio total es de $ " + total;
-            return total;
         }
         contador++;
-        $('#lista-carrito').append(presupuestoTotal);
-        return total;
     }
 });
 
@@ -77,19 +86,17 @@ function agregarProducto(producto) {
     console.log(carrito);
 }
 
-//Mostrar carrito
-$("#carritoDeCompras").on('click', function() {
-    let precioTotal = document.getElementById("lista-carrito");
-    if (precioTotal.style.display === "none") {
-        precioTotal.style.display = "block";
-    } else {
-        precioTotal.style.display = "none";
-    }
-});
-
 //Animacion del titulo
 $(".hero-text").prepend('<h1 id="h1-ht" style="display: none">Tienda FutFem</h1>');
 $(document).ready(function(){
     $("#h1-ht").delay(1500)
     .slideDown("slow");
+});
+
+//Modal carrito
+$("#carritoDeCompras").on('click', function() {
+    $('#carritoModal').modal('show');
+});
+$('.close').on('click', function() {
+    $('#carritoModal').modal('hide');
 });

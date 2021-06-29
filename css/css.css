@@ -37,6 +37,7 @@ p {
   font-variant: small-caps;
   color: whitesmoke;
   background-color: teal;
+  font-size: large;
   padding: 0.5em; 
   margin-bottom: 0.5em;}
 
@@ -45,7 +46,7 @@ p {
   font-variant: small-caps;
   font-size: large;
   color: whitesmoke;
-  background-color:rgba(47, 153, 172, 0.8);
+  background-color:teal;
   padding: 0.5em; 
   margin-bottom: 0.5em;}
 
