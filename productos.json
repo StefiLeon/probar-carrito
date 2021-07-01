@@ -82,6 +82,20 @@
         "modelo": "Panamericanos", 
         "precio": 1500, 
         "imagen":"./img/Cuadro_Panamericanos.jpg"
+        },
+        {
+        "id": 13, 
+        "tipoDeProducto": "Taza", 
+        "modelo": "Benítez", 
+        "precio": 800, 
+        "imagen":"./img/Lore1.jpg"
+        },
+        {
+        "id": 13, 
+        "tipoDeProducto": "Taza", 
+        "modelo": "Larroquette", 
+        "precio": 800, 
+        "imagen":"./img/Taza-Larroquette.jpg"
         }
     ]
 }

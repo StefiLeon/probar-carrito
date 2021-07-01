@@ -43,7 +43,6 @@ $.getJSON(URLJSON, function(respuesta, estado){
                         //Actualizar total
                         presupuestoTotal.innerHTML = "El precio total es de $ " + total;
                         document.getElementById(`cantidadProd${producto.id}`).innerHTML = producto.cantidad;
-                        //cantidadProd.innerHTML = producto.cantidad;
                         const enJSON = JSON.stringify(producto);
                         localStorage.setItem(`${producto.tipoDeProducto} ${producto.modelo}`, enJSON);
                         return total;
@@ -58,7 +57,7 @@ $.getJSON(URLJSON, function(respuesta, estado){
                     const enJSON = JSON.stringify(producto);
                     localStorage.setItem(`${producto.tipoDeProducto} ${producto.modelo}`, enJSON);
                     //agregar al modal carrito
-                    $('#probarAca').append(`<tr>
+                    $('#listaDeCarrito').append(`<tr>
                     <td class="w-25 compras">
                     <img src="${producto.imagen}" class="img-fluid img-thumbnail" alt="${producto.tipoDeProducto} ${producto.modelo}">
                     </td>
@@ -95,8 +94,36 @@ $(document).ready(function(){
 
 //Modal carrito
 $("#carritoDeCompras").on('click', function() {
+    $('#carritoModal').slideDown("slow");
     $('#carritoModal').modal('show');
 });
 $('.close').on('click', function() {
+    $('#carritoModal').modal('hide');
+});
+
+//Finalizar compra
+$('#finalizarCompra').on('click', function() {
+    if(carrito.length != 0) {
+        Swal.fire({
+        title: '¡Gracias!',
+        text: 'Compra realizada',
+        icon: 'success',
+        backdrop: false,
+        confirmButtonText: 'Cerrar',
+    }).then((result) => {
+        if(result.isConfirmed) {
+            location.reload();
+        }
+    });
+    } else {
+        Swal.fire({
+            title: '¡Error!',
+            text: 'Agregue productos para continuar',
+            icon: 'error',
+            backdrop: false,
+            confirmButtonText: 'Cerrar'
+        });
+    }
+    localStorage.clear();
     $('#carritoModal').modal('hide');
 });
